@@ -1,0 +1,6 @@
+Coins,result=[int(input(i)) for i in range(int(input()))],[]
+main_=[0]+[i+1 for i in range(len(Coins)-1) if Coins[i]>Coins[i+1]]
+for i in range(len(main_)-1):
+    result.append((sum(Coins[main_[i]:main_[i+1]])))
+result.append(sum(Coins[main_[-1]:]))
+print("maximum profit is {}".format(max(result)))
