@@ -1,0 +1,13 @@
+n=input("Hey! rajan, Please enter the number to check Happy number :  ")
+temp=n
+dummy_list = []
+while n != 1:
+    n = sum(int(i)**len(temp) for i in str(n))
+    if n in dummy_list:
+        break
+    dummy_list.append(n)
+    
+if dummy_list[-1]==1:
+    print("yeah happy number!")
+else:
+    print("{} not a happy number ".format(n))
